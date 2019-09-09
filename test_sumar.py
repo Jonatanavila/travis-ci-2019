@@ -40,11 +40,12 @@ class Test_sut(unittest.TestCase):
 
 	def test_valorabsoluto(self):
 		self.assertEqual(sut.valorabsoluto(-7),7)
-
+        def test_valorabsoluto(self):
+		valorabs=sut.valorabsoluto(-4)
+		self.assertTrue(valorabs == 4)
+	
 	def test_costototal(self):
-		sut.sumar = MagicMock(return_value=2)
-		valor = sut.costototal(4,7)
-		string= 'El costo total es $2' 
+		valor = sut.costototal(4,7) 
 		self.assertEqual(valor, string)
 
 	@patch('math.exp')
