@@ -1,6 +1,6 @@
 import unittest
 import sut 
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock,mock_open
 from unittest.mock import patch
 #from math import math.sum
 #from unittest.mock.patch(math.exp, math.sqrt)
