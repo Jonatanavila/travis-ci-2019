@@ -45,6 +45,7 @@ class Test_sut(unittest.TestCase):
 		self.assertTrue(valorabs == 4)
 	
 	def test_costototal(self):
+		sut.sumar=MagicMock(return_value=2)
 		valor = sut.costototal(4,7) 
 		self.assertEqual(valor, string)
 
