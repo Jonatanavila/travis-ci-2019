@@ -41,11 +41,13 @@ class Test_sut(unittest.TestCase):
         def test_valorabsoluto(self):
 		valorabs=sut.valorabsoluto(-4)
 		self.assertTrue(valorabs == 4)
+		
 	@patch('sut.sumar')
 	def test_costototal(self,sumar):
 		sumar.return_value= 2
-		a=sut.costototal(4,7)
-		self.assertEqual(valor, string)
+		a=sut.costototal(5,4)
+		esperado= 'el costo total es $2'
+		self.assertEqual(a,esperado)
 
 	@patch('math.exp')
 	@patch('math.sqrt')
