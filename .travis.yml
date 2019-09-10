@@ -1,9 +1,9 @@
 language: python 
-python: 
-- "3.5"
+python: "3.5"
 #command to install dependencies
-install: "pip install coverage"
-"pip install mock==2.0"
+install: "pip install mock==2.0" 
+"pip install coverage"
+
 #command to run tests
 script:
 - coverage run test_sumar.py
