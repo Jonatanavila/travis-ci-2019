@@ -38,15 +38,13 @@ class Test_sut(unittest.TestCase):
 	def comparar_igualdad(self):
 		self.asserEqual(sut.comparar(7,3),"A y B son iguales")
 
-	def test_valorabsoluto(self):
-		self.assertEqual(sut.valorabsoluto(-7),7)
         def test_valorabsoluto(self):
 		valorabs=sut.valorabsoluto(-4)
 		self.assertTrue(valorabs == 4)
-	
-	def test_costototal(self):
-		sut.sumar=MagicMock(return_value=2)
-		valor = sut.costototal(4,7) 
+	@patch('sut.sumar')
+	def test_costototal(self,sumar):
+		sumar.return_value= 2
+		a=sut.costototal(4,7)
 		self.assertEqual(valor, string)
 
 	@patch('math.exp')
