@@ -47,7 +47,7 @@ class Test_sut(unittest.TestCase):
         sumar.return_value= 2
         a=sut.costototal(5,4)
         esperado= 'el costo total es $2'
-        self.assertEqual(a,esperado)
+        self.assertTrue(a,esperado)
 
     @patch('math.exp')
     @patch('math.sqrt')
